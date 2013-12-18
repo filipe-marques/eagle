@@ -32,7 +32,7 @@ require_once ("config/functions/sessions.php");
 require_once("config/classes/yourclass.php");
 
 // accessing $files associative array
-// example: $files["header"];
+// example: $files['header'];
 $files = array(
 	"css" => "config/resources/css/bootstrap.min.css",
 	"css-theme" => "config/resources/css/bootstrap-theme.css",
