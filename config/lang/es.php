@@ -28,4 +28,8 @@ THE SOFTWARE.
  *
  * define ("YOURCONSTANT","string");
  */
+
+define ("LABEL_HELLO_PAGE","Hol&aacute; Mundo - EAGLE PHP BOOTSTRAP version 1.0.1");
+define ("LABEL_OLA","EAGLE PHP BOOTSTRAP version 1.0.1 <br> de");
+
 ?>

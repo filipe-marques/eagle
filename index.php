@@ -24,26 +24,30 @@
 *
 */
 
-// Development purposes - DO NOT USE THIS IN PRODUCTION
-//error_reporting(E_ALL);
-//ini_set('display_errors', true);
-//ini_set('html_errors', false);
+// DEVELOPMENT PURPOSES - DO NOT USE THIS IN PRODUCTION ENVIRONMENT
+error_reporting(E_ALL);
+ini_set('display_errors', true);
+ini_set('html_errors', false);
 //--------------------------------------------------------
 
-if(file_exists("config/init.php")){
-    require_once("config/init.php");
+if(file_exists("init.php")){
+	// requiring the init file
+	require_once("init.php");
+}else{
+	die("Not found init.php file!");
 }
 
-$files['pt'];
+// requiring the pt strings file
+require_once("config/lang/uk.php");
 
 ?>
 <!DOCTYPE html>
 <html>
   <head>
-    <title><?php echo(LABEL_HELLO_PAGE); ?></title>
+    <title><?php echo (LABEL_HELLO_PAGE); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
-    <link href="<?php $files['css'];?>" rel="stylesheet">
+    <link href="<?php echo ($files['css']);?>" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -53,17 +57,22 @@ $files['pt'];
     <![endif]-->
   </head>
   <body>
-    <h1>Hello, world! from 
-		<?php 
-			$files['yourclass'];
+	<div class="container">
+	<?php require_once($files['header']); ?>
+	<br>
+    <h1><?php echo (LABEL_OLA); ?> 
+		<?php
 			$instance = new YourClass();
 			$instance->setName();
 		?>
 	</h1>
+	<br>
+	<?php require_once($files['footer']); ?>
 
+	</div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="<?php $files['js'];?>"></script>
+    <script src="<?php echo ($files['js']);?>"></script>
   </body>
 </html>
