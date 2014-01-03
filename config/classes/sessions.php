@@ -24,7 +24,59 @@
 *
 */
 
-/*
- * YOUR FUNCTIONS HERE
- */
+
+class Sessions{
+	
+	public function generate_new_session_id() {
+    	session_regenerate_id();
+	}
+	
+	public function user(){
+		if ($_SESSION['sexo'] === 'M') {
+        	$user = LABEL_USERO1;
+    	} elseif ($_SESSION['sexo'] === 'F') {
+        	$user = LABEL_USERO2;
+    	}
+    	return $user;
+	}
+	
+	public function sexo() {
+    	if ($_SESSION['sexo'] === 'M') {
+        	$sex = LABEL_SEXO1;
+    	} elseif ($_SESSION['sexo'] === 'F') {
+        	$sex = LABEL_SEXO2;
+    	}
+    	return $sex;
+	}
+	
+	public function nothing() {
+    	if (empty($_SESSION['id'])) {
+    	    header("Location: signin.php");
+    	    exit();
+    	}
+	}
+
+	public function full() {
+    	if (isset($_SESSION['id'])) {
+    	    header("Location: user.php?page=initial");
+    	    exit();
+    	}
+	}
+
+	public function is_not_admin() {
+    	if ($_SESSION['prinome'] != "admin") {
+    	    header("Location: user.php?page=initial");
+    	    exit();
+    	}
+	}
+
+	public function is_admin() {
+    	if ($_SESSION['prinome'] == "admin") {
+    	    header("Location: admin.php");
+    	    exit();
+    	}
+	}
+}
+
 ?>
+

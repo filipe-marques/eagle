@@ -31,5 +31,6 @@ THE SOFTWARE.
 
 define ("LABEL_HELLO_PAGE","Hello World - EAGLE PHP BOOTSTRAP version 1.0.1");
 define ("LABEL_OLA","EAGLE PHP BOOTSTRAP version 1.0.1 <br> from");
+define ("LABEL_INDEX_1","Using Twitter Bootstrap 3 as frontend!");
 
 ?>

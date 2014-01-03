@@ -30,6 +30,8 @@ require_once ("config/functions/process.php");
 require_once ("config/functions/sessions.php");
 
 require_once("config/classes/yourclass.php");
+require_once("config/classes/process.php");
+require_once("config/classes/sessions.php");
 
 // accessing $files associative array
 // example: $files['header'];

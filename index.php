@@ -37,7 +37,7 @@ if(file_exists("init.php")){
 	die("Not found init.php file!");
 }
 
-// requiring the pt strings file
+// requiring the uk strings file
 require_once("config/lang/uk.php");
 
 ?>
@@ -60,11 +60,13 @@ require_once("config/lang/uk.php");
 	<div class="container">
 	<?php require_once($files['header']); ?>
 	<br>
-    <h1><?php echo (LABEL_OLA); ?> 
+    <h1><?php echo (LABEL_OLA); ?>
 		<?php
 			$instance = new YourClass();
 			$instance->setName();
 		?>
+		<br>
+		<?php echo (LABEL_INDEX_1); ?>
 	</h1>
 	<br>
 	<?php require_once($files['footer']); ?>
