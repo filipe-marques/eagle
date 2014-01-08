@@ -62,7 +62,7 @@ require_once("config/lang/uk.php");
 	<br>
     <h1><?php echo (LABEL_OLA); ?>
 		<?php
-			$instance = new YourClass();
+			$instance = new Yourclass();
 			$instance->setName();
 		?>
 		<br>

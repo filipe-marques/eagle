@@ -24,14 +24,17 @@
 *
 */
 
+session_name("Eagle PHP Bootstrap");
+session_start();
+
 require_once ("config/gravatar/grafunc.php");
 require_once ("config/database/connect.php");
-require_once ("config/functions/process.php");
-require_once ("config/functions/sessions.php");
+require_once ("config/functions/functions.php");
 
-require_once("config/classes/yourclass.php");
-require_once("config/classes/process.php");
-require_once("config/classes/sessions.php");
+// The names of the .php files are the same as the names of classes 
+spl_autoload_register(function($class){
+	require_once("config/classes/" . $class . ".php");
+});
 
 // accessing $files associative array
 // example: $files['header'];
