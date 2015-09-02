@@ -87,8 +87,7 @@ if(Validation::wasClicked('submit_register'))
         <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
         <div class="row">
             <div class="col-md-10">
-                <h3>Registe-se é fácil !</h3><h4>Quando terminar, receberá um email para proceder á confirmação da sua conta !</h4>
-                <form method="post" action="" name="register" id="register" validate>
+                <h3>Registe-se é fácil !</h3>                <form method="post" action="" name="register" id="register" validate>
                         <div class="controls">
                             <label for="email">Email</label>
                             <input type="email" class="form-control" name="email" id="email" value="<?php Validation::get('email');  ?>" required data-validation-required-message="Por favor insira um email !" autocomplete="off">
